@@ -16,7 +16,6 @@ if __name__ == "__main__":
             loaded = json.load(f)
             settings.update(loaded)
 
-    print(settings)
     output_filename = Path(args.settings)
     if not output_filename.parent.exists():
         output_filename.parent.mkdir()
