@@ -2,13 +2,12 @@ import argparse
 import json
 from pathlib import Path
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Append json to another json")
-    parser.add_argument("json", nargs='+', help="Json files to append")
+    parser.add_argument("json", nargs="+", help="Json files to append")
     parser.add_argument("--settings", "-o", type=str, default=".vscode/settings.json")
 
     args = parser.parse_args()
-
 
     settings = dict()
     for json_filename in args.json:
